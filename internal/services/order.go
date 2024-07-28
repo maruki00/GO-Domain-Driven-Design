@@ -31,3 +31,7 @@ func WithMemoryCustomerRepository(cr custmer.CustomerRespository) OrderConfigura
 	cr := offlinerepo.New()
 	return WithCustomerRepository(cr)
 }
+
+func (o *OrderService) CreateOrder(customerId int, productsId []int) error {
+
+}

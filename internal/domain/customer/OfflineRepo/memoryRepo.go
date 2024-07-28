@@ -43,6 +43,12 @@ func (o *CustomerMemoryRepo)Add(customer aggrigate.Customer) error {
 }
 
 func (o *CustomerMemoryRepo)Update(customer aggrigate.Customer) error {
-
+	if _, ok = c.items[custmer.ID]; !ok {
+		return errors.New("customer Doesnt Exists")
+	}
+	o.Lock()
+	o.items[c.ID] = c
+	o.Unlock()
+	return nil
 
 }
