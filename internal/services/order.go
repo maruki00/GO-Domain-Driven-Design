@@ -33,5 +33,5 @@ func WithMemoryCustomerRepository(cr custmer.CustomerRespository) OrderConfigura
 }
 
 func (o *OrderService) CreateOrder(customerId int, productsId []int) error {
-
+	c, err := o.customers
 }
