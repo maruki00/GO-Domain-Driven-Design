@@ -20,8 +20,8 @@ func NewOrderService(cfgs ...OrderConfiguration) (*OrderService, error) {
 	return os, nil
 }
 
-func WithCustomerRepository(cr custmer.CustomerRespository) OrderConfiguration {
-	return func(os *orderService) error {
+func WithCustomerRepository(cr customer.CustomerRespository) OrderConfiguration {
+	return func(os *OrderService) error {
 		os.customers = cr
 		return nil
 	}
